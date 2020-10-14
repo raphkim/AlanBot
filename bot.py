@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 load_dotenv()
 token = os.getenv('DISCORD_TOKEN')
 client = discord.Client()
-trigger_words = ['im ', 'i\'m ', 'i am']
+trigger_words = ['im ', 'i\'m ', 'i am ']
 
 @client.event
 async def on_message(message):
