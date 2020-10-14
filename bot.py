@@ -22,7 +22,7 @@ def detect_im(message):
     return -1
 
 def detect(message, keyword, curr):
-    index = message[curr:].find(keyword)
+    index = message.find(keyword, curr)
     if index < 0:
         return -1
     if index == 0 or message[index-1] == ' ':
@@ -31,3 +31,4 @@ def detect(message, keyword, curr):
         return detect(message, keyword, index+len(keyword))
 
 client.run(token)
+
